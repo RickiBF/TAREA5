@@ -1,33 +1,47 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 
+package com.mycompany.main;
 import java.util.Scanner;
-class icompuesto {
-    public static void main(String[] args) {
-        
-        Scanner teclado=new Scanner(System.in);
-        int c,n;
-        double m,i;
-        String nombre;
-        
-        System.out.println("Bienvenido: ");
+
+/**
+ *
+ * @author 51923
+ */
+public class Compuesto {
+    
+Scanner teclado=new Scanner(System.in);
+     private String nombre;
+     private int c,n;
+     private double m,i;
+
+ 
+    public void IngresarDatos2()
+    {
+        System.out.println("Ingrese su nombre: ");
         nombre=teclado.nextLine();
         
         System.out.println("Ingrese su capital: ");
         c=teclado.nextInt();
         
-        System.out.println("El interes sera de: ");
+        System.out.println("Ingrese el interes: ");
         i=teclado.nextDouble();
         
-        System.out.println("Numero de periodos: ");
+        System.out.println("Ingrese el numero de periodos: ");
         n=teclado.nextInt();
-        
+    }
+    
+   public void ObtenerResultado()
+    {
         i=i/100;
         m=(i*c);
         m=m*n;
-        
-    
-        
-        System.out.println("El interes Compuesto de: "+nombre+" Sera de: "+m);
+    }
+    public void MostrarDatos2()
+    {
+        System.out.println("Alumno: "+nombre);
+        System.out.println("Su importe acumulado sera de : "+m);
     }
 }
