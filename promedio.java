@@ -1,46 +1,39 @@
-// Online Java Compiler
-// Use this editor to write, compile and run your Java code online
-
+package com.mycompany.main;
 import java.util.Scanner;
-class promedio {
-    public static void main(String[] args) {
-        
-        Scanner teclado=new Scanner(System.in);
-        int T1,T2,T3,T4,T5,EMC,EF;
-        double PTA,PROMF;
-        String alumno;
-        
+
+/**
+ *
+ * @author 51923
+ */
+public class Promedio {
+    Scanner teclado=new Scanner(System.in);
+     private String nombre;
+     private int EMC,EF,PTA;
+     private double PROMF;
+
+ 
+    public void IngresarDatos()
+    {
         System.out.println("Ingrese su nombre: ");
-        alumno=teclado.nextLine();
+        nombre=teclado.nextLine();
         
-        System.out.println("Ingrese su primera tarea: ");
-        T1=teclado.nextInt();
+        System.out.println("Ingrese su promedio de tareas academicas: ");
+        PTA=teclado.nextInt();
         
-        System.out.println("Ingrese su segunda tarea: ");
-        T2=teclado.nextInt();
-        
-        System.out.println("Ingrese su tercera tarea: ");
-        T3=teclado.nextInt();
-        
-        System.out.println("Ingrese su cuarta tarea: ");
-        T4=teclado.nextInt();
-        
-        System.out.println("Ingrese su quinta tarea: ");
-        T5=teclado.nextInt();
-        
-        PTA=(T1+T2+T3+T4+T5)/5;
-        
-        System.out.println("Su promedio de tareas es: "+PTA);
-        
-        System.out.println("Ingrese su Examen de medio curso: ");
+        System.out.println("Ingrese su examen de medio curso: ");
         EMC=teclado.nextInt();
         
-        System.out.println("Ingrese su Examen final: ");
+        System.out.println("Ingrese su examen final: ");
         EF=teclado.nextInt();
-        
-        PROMF=(PTA+EMC+EF)/3;
+    }
     
-        
-        System.out.println("BIENVENIDO ALUMNO: "+alumno+" Su promedio final es: "+PROMF);
+   public void ObtenerPromedio()
+    {
+        PROMF=(PTA+EMC+EF)/3;
+    }
+    public void MostrarDatos()
+    {
+        System.out.println("Alumno: "+nombre);
+        System.out.println("Su promedio sera de : "+PROMF);
     }
 }
